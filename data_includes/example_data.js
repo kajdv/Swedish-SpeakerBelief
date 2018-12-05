@@ -112,7 +112,7 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-Sp_bel.csv" ).
             .settings.add(25,85, newText("labelLeft", "St&auml;mmer inte").settings.bold() )
             .settings.add(120,80, getScale("answer").settings.size(200, 0) )
             .settings.add(355,83, newText("labeRight", "St&auml;mmer").settings.bold() )
-            .settings.add(208,105, newText("labelMid", "Kanske").settings.bold() )            
+            .settings.add(208,105, newText("labelMid", "Os&auml;ker").settings.bold() )            
             .print()      
         ,
         newText("warning","Var god v&auml;lj ett svar.")
