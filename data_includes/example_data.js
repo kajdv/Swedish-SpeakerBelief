@@ -79,7 +79,7 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-Sp_bel.csv" ).
             .start()
             .wait()
         ,    
-        newTooltip("instructions", "Klicka på mellanslagstangenten f&ouml;r att forts&auml;tta.")
+        newTooltip("instructions", "Klicka p&aring; mellanslagstangenten f&ouml;r att forts&auml;tta.")
             .settings.size(180, 25)
             .settings.position("bottom center")
             .settings.key(" ", "no click")
@@ -107,13 +107,13 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-Sp_bel.csv" ).
         newScale("answer", 9)
             .settings.log()
         ,
-        newCanvas("answerbox", 850, 150) 
+        newCanvas("answerbox", 850, 150)
             .settings.add(25,40, newText("claim", item.Claim).settings.size(700, 30) )
-            .settings.add(25,85, newText("labelLeft", "Nej").settings.bold() )
-            .settings.add(60,80, getScale("answer").settings.size(200, 0) )
-            .settings.add(290,85, newText("labeRight", "Ja").settings.bold() )
-            .settings.add(136,105, newText("labelMid", "Kanske").settings.bold() )            
-            .print()    
+            .settings.add(25,85, newText("labelLeft", "St&auml;mmer inte").settings.bold() )
+            .settings.add(120,80, getScale("answer").settings.size(200, 0) )
+            .settings.add(355,83, newText("labeRight", "St&auml;mmer").settings.bold() )
+            .settings.add(208,105, newText("labelMid", "Kanske").settings.bold() )            
+            .print()      
         ,
         newText("warning","Var god v&auml;lj ett svar.")
             .settings.hidden()
@@ -145,7 +145,8 @@ PennController.FeedItems( PennController.GetTable( "SW-datasource-Sp_bel.csv" ).
     .log("EmbCondition", item.EmbCondition)
     .log("mcpred", item.mcpred)  
  //   .log("Stims", item.Stims)  
-    .log("source", PennController.GetURLParameter("source")) 
+    .log("source", PennController.GetURLParameter("source"))   
+    .log("PROLIFIC_PID", PennController.GetURLParameter("PROLIFIC_PID")) 
 );
 
 
